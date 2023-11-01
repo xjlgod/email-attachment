@@ -63,5 +63,7 @@ public class Sender {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
+        log.info("发送邮件完成");
     }
 }

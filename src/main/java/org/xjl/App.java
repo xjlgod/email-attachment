@@ -15,11 +15,11 @@ public class App {
         SenderConfig senderConfig = new SenderConfig();
         Properties props = new Properties();
         // 收件人邮箱
-        props.put("recipient.account", "xxxx@xxx.com");
+        props.put("recipient.account", "xxx@xxx.com");
         // 发件人邮箱
-        props.put("sender.account", "xxxxx@qq.com");
+        props.put("sender.account", "xxx@xxx.com");
         // 发件人邮箱密码，注意这里不是qq密码，而是开启SMTP服务后的密码
-        props.put("sender.password", "xxxxx");
+        props.put("sender.password", "xxx");
         // 存放文件的文件夹目录，批量发送此文件夹下所有文件
         props.put("filesDir", "files");
         senderConfig.configByProperties(props);
@@ -27,6 +27,6 @@ public class App {
         Sender sender = new Sender();
         sender.setConfig(senderConfig);
         // 参数：邮件名，每次邮件发送间隔毫秒，每次批量发送最大附件
-        sender.sendAttachments("test", 2000, 2);
+        sender.sendAttachments("test", 10000, 2);
     }
 }
